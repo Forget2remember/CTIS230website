@@ -81,15 +81,15 @@ function onNavItemMouseout(navListItem) {
 
 
 // Debugging Purposes
-let wellNavItem0 = document.getElementById("wellNavItem0");
-wellNavItem0.addEventListener("mouseover", function(){onNavItemMouseover(wellNavItem0)});
-wellNavItem0.addEventListener("mouseout", function(){onNavItemMouseout(wellNavItem0)});
+// let wellNavItem0 = document.getElementById("wellNavItem0");
+// wellNavItem0.addEventListener("mouseover", function(){onNavItemMouseover(wellNavItem0)});
+// wellNavItem0.addEventListener("mouseout", function(){onNavItemMouseout(wellNavItem0)});
 
-let navSection = document.getElementById("navSection");
-navSection.addEventListener("mouseover", function(){onNavigationMouseover(navSection)});
-function onNavigationMouseover(navSection) {
-	alert("navigation mouseover");
-};
+// let navSection = document.getElementById("navSection");
+// navSection.addEventListener("mouseover", function(){onNavigationMouseover(navSection)});
+// function onNavigationMouseover(navSection) {
+// 	alert("navigation mouseover");
+// };
 // End of debugging purposes
 
 
