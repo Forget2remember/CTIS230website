@@ -362,7 +362,7 @@ h1#VulnerUtility
 	overflow: none;
 }
 
-.p
+.home.p
 {
 	font-family: monospace;
 	font-size: 1.5em;
@@ -418,12 +418,11 @@ body
 	overflow-y: 
 }
 
-section
+/*section
 {
 	display: block;
 	position: relative;
-	/*overflow: auto;*/
-}
+}*/
 
 body#home-bg
 {
@@ -448,88 +447,237 @@ The Well of Knowledge
 *
 */
 
-#navItemHomeWell
+/* Controls the styling for the <body> element of the page */
+/* Includes all the visible content that the user sees */
+body#theWellBody
+{
+	min-height: 900vh;
+	background: linear-gradient(0deg, rgba(0,0,0,1) 40%, rgba(9,9,121,1) 70%, rgba(0,166,255,0.6124649688977153) 100%); 
+	background-repeat: no-repeat;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.well.section
+{
+	height: auto;
+	max-width: 95vw;
+	width: 95vw
+	border-width: 1px;
+	border-radius: 25px;
+	box-shadow: 9px 5px 10px black;
+	margin-bottom: 7.5em;
+	/*padding: 2em;*/
+}
+
+.well.section.nav
+{
+	height: auto;
+	box-shadow: none;
+}
+
+.navbar.nav-container-inner.well
+{
+	box-shadow: none;
+}
+
+.well.unordered-list
+{
+	color: #0A805E;
+}
+
+.nav-list-item.well
+{
+	color: #0A805E;
+}
+
+.nav-list-item.well.home
 {
 	box-shadow: 0px 2px 1px #262829;
 }
 
-.well-page-link
+.nav-link.well
 {
 	color: #262829;
 }
 
-#navBarWellHome
+.nav-link.well.home
 {
 	text-shadow: 0px 6px 3px #262829;
 }
 
-#navInnerContainerWell
+.well.div.bubbles
 {
-	box-shadow: 7px 3px 7px black;
-	width: 100%;
-	border-radius: 25%;
+	max-width: 100vw;
+	min-height: 100vh;
+	z-index: 10;
+	position: absolute;
+	display: none;
 }
 
-.section-well-intro
+.bubble
+{
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	
+    height: 50px;
+	position: relative;
+	width: 50px;
+	z-index: 1;
+}
+
+/* Controls styling for all elements within the "well intro" class */
+/* This includes all elements within the second (introduction) section of the page */
+.well.intro
 {
 	position: relative;
-	height: auto;
+	height: 100%
 	width: auto;
-	margin: 25px;
-	padding: 15px;
-	border: solid;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	overflow: auto;
+	box-sizing: border-box;
+	color: #0A805E;
+	font-weight: bold;
+	font-family: "Lexend Deca", sans-serif;
+}
+
+/* This is the first "content section" of this page, which doesn't include the navigation header content */
+.well.section.intro
+{
+	height: auto;
 	border-width: 1px;
 	border-radius: 25px;
 	box-shadow: 9px 5px 10px black;
-	box-sizing: border-box;
-	overflow: auto;
+	margin-bottom: 7.5em;
+	padding: 2em;
 }
 
-.div-well-intro-main
+/* Controls styling for all elements beginning with classes -> "well intro div" */
+/* These are only <div> elements */
+.well.intro.div
 {
-	position: relative;
-	height: 100%;
-	width: auto;
-	box-sizing: border-box;
-	overflow: auto;
+
 }
 
-.div-well-intro-top
+/* The "outer" <div> container. Holds all other elements within this section */
+.well.intro.div.main
 {
-	position: relative;
-	height: 100%;
-	width: auto;
-	box-sizing: border-box;
-	overflow: auto;
+
 }
 
-.h1-well-intro
+/* The first (top-most) <div> container encapsulated within the "main" <div> container (outer) */
+/* Holds the <h1> header element for the section */
+.well.intro.div.main.top
 {
-	height: 100%;
-	width: auto;
-	color: #51484f;
-	/*border: solid;*/
+
+}
+
+.well.intro.h1
+{
+	color: rgba(0, 0, 0, .025);
 	text-align: center;
-	font-size: 55px;
-	font-family: "Bookman", "Times New Roman";
-	text-shadow: 2px 4px 2px #50404d, -2px -4px 2px #50404d;
-	/*font-weight: bold;*/
+	font-size: 3.5em;
+	text-shadow: 2px 4px 2px #0A805E, -2px -4px 2px #0A805E, 0px 0px 3px #0A805E;
 	letter-spacing: 1px;
 }
 
-body#well-bg
+.well.intro.div.main.middle
 {
-	min-height: 400vh;
- 	/*background: rgb(0,0,0);*/
-	background: linear-gradient(0deg, rgba(0,0,0,1) 40%, rgba(9,9,121,1) 70%, rgba(0,166,255,0.6124649688977153) 100%); 
-	background-repeat: no-repeat;
+	word-spacing: .5em;
+}
+
+/* The second, "main content section" of this page */
+/* Includes the different types of cybersecurity content */
+section#theWellContentSection
+{
+	text-align: center;
+	height: 210vh;
+}
+
+.well.div.content.main
+{
+	/*color: rgba(10, 128, 94, 0);*/
+	color: rgba(10, 128, 94, 0);
+	text-shadow: 0px 0px .5px #0A805E;
+	height: auto;
+	padding-top: 5em;
+}
+
+.well.content.h3
+{
+	margin-bottom: 3em;
+}
+
+span#theWellContentHeader
+{
+	font-size: 2em;
+	letter-spacing: .25em;
+}
+
+
+.well.div.content.sub
+{
+	height: auto;
+	/*display: block;*/
+	float: left;
+}
+
+.well.ol
+{
+	float: left;
+}
+
+.well.li
+{
+	float: left;
+	margin-left: 1em;
+	margin-top: 2em;
+	font-weight: bold;
+}
+
+.well.li.span
+{
+	text-decoration: underline;
+	font-size: 1.2em;
+}
+
+.well.li.p
+{
+	text-align: left;
+	padding-left: 1em;
+	margin-top: 2em;
+	width: 90vw;
+	float: left;
+}
+
+.well.div.content.sources
+{
+
+}
+
+.well.ol.span
+{
+	font-size: 2em;
+	text-decoration: underline;
+}
+
+.well.li.sources
+{
+	width: 100%;
 }
 
 section#deepWellSection
 {
 	width: 80vw;
-	height: 100vh;
+	/*height: 100vh;*/
 	border: solid;
+	display: none;
 }
 
 /*
@@ -546,20 +694,23 @@ body#history-bg
 {
 	 background-image: linear-gradient(to top, #1b181f, #1f1723, #251525, #2c1226, #330d24, #380a23, #3c0721, #41041f, #45041f, #49041f, #4c041f, #50041f);
 	 background-repeat: no-repeat;
+	 height: 400vh;
 }
 
-#historyPageFirstSection
+.history.section.top
 {
 	display: block;
 	position: relative;
 	/*border: 1px red solid;*/
-	width: 90vw;
+	width: 80vw;
 	height: 75vh;
 	margin: 5em;
+	margin-left: 8em;
 	/*background: rgba(50, 0, 0, 0.4);*/
 	box-shadow: 0px 0px 15px #320000;
 	box-shadow: 0px 0px 15px #AA0000;
 	border-radius: 10%;
+	overflow: auto;
 }
 
 div#historySec1Div1
@@ -570,6 +721,36 @@ div#historySec1Div1
 	position: absolute;
 	width: auto;
 	height: auto;
+}
+
+div#cyberHistoryDiv
+{
+	position: absolute;
+	transform: translate(-20%, -180%);
+	font-family: "Times New Roman";
+	font-size: 1.1em;
+	text-align: center;
+	/*color: rgba(0, 0, 0, 0);*/
+}
+
+span#cyberHistory
+{
+	display: block;
+	font-size: 3em;
+	padding-bottom: .15em;
+	letter-spacing: .5em;
+	color: rgba(0, 0, 0, 0);
+	text-shadow: 0px 0px 5px red;
+	box-shadow: 0px -3.5px 4px black;
+	padding-left: .5em;
+}
+
+span#cyberHistoryDetails
+{
+	color: rgba(0, 0, 0, 0);
+	text-shadow: 0px 0px 1px red;
+	box-shadow: 6px 1px 7px black;
+	padding: .5em;
 }
 
 div#digitalBookContainer
@@ -612,22 +793,51 @@ span#digitalBookSource
 	text-shadow: 0px 0px 3px red;
 }
 
-section#historyPagesSecondSection
+.history.section.main
 {
-	margin-top: 45em;
 	display: block;
-	max-width: 100vw;
-	height: auto;
+	position: relative;
+	/*border: 1px red solid;*/
+	width: 80vw;
+	height: 100vh;
+	margin: 5em;
+	margin-left: 8em;
+	/*background: rgba(50, 0, 0, 0.4);*/
+	box-shadow: 0px 0px 15px #320000;
+	box-shadow: 0px 0px 15px #AA0000;
+	border-radius: 10%;
+	overflow: auto;
+	color: rgba(0, 0, 0, 0);
+	text-shadow: 0px 0px 1px red;
+	padding: 2em;
+}
+
+.history.div.content.main
+{
+	/*margin-top: 25em;*/
+	display: block;
+	max-width: 80vw;
+	text-align: center;
 	position: relative;
 }
 
-.content-divider-history
+.history.content.h2
 {
-	margin-top: 25em;
-	display: block;
-	height: 50vh;
-	max-width: 80vw;
-	/*border: 1px red solid;*/
-	text-align: center;
-	position: relative;
+	text-decoration: underline;
+}
+
+.history.div.content.sub
+{
+	height: auto;
+}
+
+.history.content.p
+{
+	word-spacing: .5em;
+}
+
+.history.ol.span
+{
+	font-size: 2em;
+	text-decoration: underline;
 }

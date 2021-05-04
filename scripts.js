@@ -3,14 +3,28 @@
 let viewWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 let viewHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 // Bring in the objects w/ class="circle"
+// Do the same for <div> objects w/ class "bubble"
 let circles = document.getElementsByClassName("circle");
+let bubbles = document.getElementsByClassName("bubble");
 // Call this function whenever the page is loaded or refreshed
-window.onload = pageReload();
+window.onload = onPageReload();
 
-function pageReload() {
+function onPageReload() {
+	// let currentWindow = browser.windows.getCurrent();
 	// alert("onload" + viewWidth + viewHeight);
+	// viewHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+	// viewWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 	let randomWidth;
 	let randomHeight;
+	// if(currentWindow.url == "forget2remember.github.io/CTIS230website/theWellOfKnowledge.html") {
+	// 	for(let i = 0; i < bubbles.length; i++) {
+	// 		randomWidth = Math.floor(Math.random() * viewWidth) + "px";
+	// 		randomHeight = Math.floor(Math.random() * viewHeight + "px");
+	// 		randomHeight *= 2;
+	// 		bubbles.item(i).style.marginLeft = randomWidth;
+	// 		bubbles.item(i).style.marginTop = randomHeight;
+	// 	}
+	// }
 	for(let i = 0; i < circles.length; i++) {
 		randomWidth = Math.floor(Math.random() * viewWidth) + "px";
 		randomHeight = Math.floor(Math.random() * viewHeight + "px");
@@ -51,6 +65,11 @@ function onDarkMoonClick() {
 	darkMoon.style.background = "rgb(245,55,7)";
 	darkMoon.style.background = "radial-gradient(circle, rgba(245,55,7,0.3720354352678571) 4%, rgba(244,85,15,0.5821194688813025) 14%, rgba(250,9,9,1) 73%)"; 
 	darkMoonClick = true; 
+	bothMoonsClicked();
+}
+
+function bothMoonsClicked() {
+	alert("Congrats! You solved a riddle!");
 }
 
 let wellNavItem = document.getElementById("wellNavItem");
@@ -140,6 +159,26 @@ function onMenuItemMouseout(menuItem) {
 	let arrowId = menuItem.id + "Arrow";
 	arrows.namedItem(arrowId).style.display = "";
 };
+
+// The code for creating and adding the bubbles randomly to the screen at load
+
+// Call this function whenever the page is loaded or refreshed
+// window.onload = onWellPageReload();
+
+// function onWellPageReload() {
+
+// 	let viewWidth0 = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+// 	let viewHeight0 = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+// 	let randomWidth;
+// 	let randomHeight;
+// 	for(let i = 0; i < bubbles.length; i++) {
+// 		randomWidth = Math.floor(Math.random() * viewWidth0) + "px";
+// 		randomHeight = Math.floor(Math.random() * viewHeight0 + "px");
+// 		randomHeight *= 2;
+// 		bubbles.item(i).style.marginLeft = randomWidth;
+// 		bubbles.item(i).style.marginTop = randomHeight;
+// 	}
+// };
 
 // 
 // Well of Knowledge
