@@ -459,8 +459,9 @@ The Well of Knowledge
 /* Includes all the visible content that the user sees */
 body#theWellBody
 {
-	min-height: 900vh;
-	background: linear-gradient(0deg, rgba(0,0,0,1) 40%, rgba(9,9,121,1) 70%, rgba(0,166,255,0.6124649688977153) 100%); 
+	/*min-height: 400vh;*/
+	/*background: linear-gradient(0deg, rgba(0,0,0,1) 40%, rgba(9,9,121,1) 70%, rgba(0,166,255,0.6124649688977153) 100%); */
+	background-image: linear-gradient( 99.9deg, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 84.8% );
 	background-repeat: no-repeat;
 	padding-left: 2em;
 	padding-right: 2em;
@@ -702,9 +703,11 @@ History Page
 
 body#history-bg
 {
-	 background-image: linear-gradient(to top, #1b181f, #1f1723, #251525, #2c1226, #330d24, #380a23, #3c0721, #41041f, #45041f, #49041f, #4c041f, #50041f);
+	 /*background-image: linear-gradient(to top, #1b181f, #1f1723, #251525, #2c1226, #330d24, #380a23, #3c0721, #41041f, #45041f, #49041f, #4c041f, #50041f);*/
+	 /* Was going to use the above background originally, but changed to make website feel more connected */
 	 background-repeat: no-repeat;
 	 height: 400vh;
+	 background-image: linear-gradient( 99.9deg, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 84.8% );
 }
 
 .history.section.top
@@ -947,7 +950,7 @@ Media Queries
 	}
 }
 
-/* Styling for networkSecurity.html */
+/* Styling for rest of pages */
 section.security-content-section {
 	width: auto;
 }
@@ -976,4 +979,22 @@ p.security-content {
 	font-family: monospace;
 	color: rgb(196, 194, 165);
 	width: 90%;
+}
+
+ol.security-sources
+{
+
+}
+
+li.security-source
+{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	font-size: 1.1em;
+	color: gold;
+}
+
+a.source-link
+{
+	color: gold;
 }
