@@ -76,16 +76,25 @@ let wellNavItem = document.getElementById("wellNavItem");
 let researchNavItem = document.getElementById("researchNavItem");
 let historyNavItem = document.getElementById("historyNavItem");
 let huntNavItem = document.getElementById("huntNavItem");
+let networkNavItem = document.getElementById("networkNavItem");
+let cloudNavItem = document.getElementById("cloudNavItem");
+let appNavItem = document.getElementById("appNavItem");
 
 wellNavItem.addEventListener("mouseover", function(){onNavItemMouseover(wellNavItem)});
 researchNavItem.addEventListener("mouseover", function(){onNavItemMouseover(researchNavItem)});
 historyNavItem.addEventListener("mouseover", function(){onNavItemMouseover(historyNavItem)});
 huntNavItem.addEventListener("mouseover", function(){onNavItemMouseover(huntNavItem)});
+networkNavItem.addEventListener("mouseover", function(){onNavItemMouseover(networkNavItem)});
+cloudNavItem.addEventListener("mouseover", function(){onNavItemMouseover(cloudNavItem)});
+appNavItem.addEventListener("mouseover", function(){onNavItemMouseover(appNavItem)});
 
 wellNavItem.addEventListener("mouseout", function(){onNavItemMouseout(wellNavItem)});
 researchNavItem.addEventListener("mouseout", function(){onNavItemMouseout(researchNavItem)});
 historyNavItem.addEventListener("mouseout", function(){onNavItemMouseout(historyNavItem)});
 huntNavItem.addEventListener("mouseout", function(){onNavItemMouseout(huntNavItem)});
+networkNavItem.addEventListener("mouseout", function(){onNavItemMouseout(networkNavItem)});
+cloudNavItem.addEventListener("mouseout", function(){onNavItemMouseout(cloudNavItem)});
+appNavItem.addEventListener("mouseout", function(){onNavItemMouseout(appNavItem)});
 
 function onNavItemMouseover(navListItem) {
 	// alert("hover");
